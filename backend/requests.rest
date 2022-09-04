@@ -1,0 +1,19 @@
+GET http://127.0.0.1:8080/oauth2/authorize?client_id=clientId&scope=openid&redirect_uri=http%3A%2F%2F127.0.0.1%3A3000%2Foauth2%2Fcode&response_mode=query&response_type=code
+
+###
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+username=user&password=password
+
+###
+# @no-redirect
+POST http://127.0.0.1:8080/oauth2/token
+Content-Type: application/json
+
+
+###
+# @no-redirect
+GET http://127.0.0.1:3000
+
+
